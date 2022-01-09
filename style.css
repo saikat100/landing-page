@@ -1,0 +1,98 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+.image-section {
+	padding-top: 50px;
+	position: cover;
+}
+.img-style {
+	height: calc(100vh - 200px);
+}
+.space-right {
+	padding-right: 50px;
+}
+.space-left {
+	padding-left: 50px;
+}
+
+.passage-section {
+	padding-top: 50px !important;
+}
+.footer-section {
+	padding-bottom: 100px;
+}
+
+/* slidebar */
+
+.card-shadow {
+	box-shadow: 0px 2px 5px gray;
+}
+
+.card-style {
+	width: 100%;
+	background: radial-gradient (50%, 100%);
+	overflow: hidden;
+	position: relative;
+}
+.card-style img {
+	transform: scale(1);
+	transition: all 300ms ease-out;
+	display: block;
+}
+.card-style:hover img {
+	transform: scale(1.1) translateY(-20px);
+	opacity: 03;
+}
+
+.plus-icon {
+	border-radius: 50%;
+	background-color: #fff;
+	position: absolute;
+	left: 45%;
+	bottom: 50%;
+	text-align: center;
+	transition: opacity 0.4s ease-in-out;
+	size: 100%;
+	text-shadow: #db0029;
+	color: #db0029;
+	font-size: 3em;
+	opacity: 0;
+}
+.card-style:hover .plus-icon {
+	opacity: 1;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.card-style::before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	background-color: #db0029;
+	transition: transform 300ms ease-in-out;
+	transform: scaleX(0);
+	transform-origin: left;
+}
+
+.card-style:hover::before,
+.card-style:focus::before {
+	transform: scaleX(1);
+}
+
+.card-style {
+	z-index: 1;
+}
+
+.card-style:hover p {
+	color: white;
+}
